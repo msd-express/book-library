@@ -1,0 +1,144 @@
+/* ============================================================
+   css/mobile.css — Адаптивность и гамбургер-меню
+   Версия: 1.0
+   Проект: Книжная полка
+   ============================================================ */
+
+/* Гамбургер — скрыт на десктопе */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+    .hamburger span {
+        display: block;
+        width: 22px;
+        height: 3px;
+        margin: 4px 0;
+        border-radius: 2px;
+        background: var(--header-text);
+        transition: all 0.3s;
+    }
+
+    .hamburger.open span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+/* Оверлей */
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+}
+
+    .sidebar-overlay.show {
+        display: block;
+    }
+
+/* Планшеты (до 1024px) */
+@media (max-width: 1024px) {
+    .books-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+}
+
+/* Телефоны (до 768px) */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -280px;
+        width: 280px;
+        min-width: 280px;
+        height: 100vh;
+        z-index: 100;
+        transition: left 0.3s ease;
+    }
+
+        .sidebar.open {
+            left: 0;
+        }
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .content {
+        padding: 12px;
+    }
+
+    .books-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        padding: 10px 14px;
+    }
+
+        .header h1 {
+            font-size: 17px;
+        }
+
+    .search-box {
+        max-width: 100%;
+        min-width: 120px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .modal {
+        width: 95%;
+        padding: 16px;
+    }
+}
+
+/* Очень узкие (до 480px) */
+@media (max-width: 480px) {
+    .header-actions {
+        gap: 4px;
+    }
+
+    .btn {
+        padding: 5px 8px;
+        font-size: 11px;
+    }
+
+    .btn-sm {
+        padding: 4px 6px;
+    }
+
+    .book-card {
+        padding: 12px;
+    }
+
+    .book-title {
+        font-size: 14px;
+    }
+}

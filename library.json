@@ -1,0 +1,72 @@
+{
+  "version": "1.0",
+  "updated": "2026-05-01T12:00:00",
+  "settings": {
+    "theme": "light",
+    "sort_by": "title",
+    "sort_order": "asc",
+    "view": "grid"
+  },
+  "categories": [
+    "Фантастика",
+    "Детективы",
+    "Учебники",
+    "История",
+    "Программирование",
+    "Психология",
+    "Другое"
+  ],
+  "books": [
+    {
+      "id": 1,
+      "title": "Основание",
+      "author": "Айзек Азимов",
+      "category": "Фантастика",
+      "format": "FB2",
+      "language": "ru",
+      "path": "library/Фантастика/Азимов/Основание.fb2",
+      "size": "1.2 MB",
+      "date_added": "2026-05-01",
+      "bookmark": true,
+      "rating": 5,
+      "notes": "Классика научной фантастики. Перечитать в этом году.",
+      "tags": [ "космос", "классика", "трилогия" ],
+      "read": false,
+      "read_date": null
+    },
+    {
+      "id": 2,
+      "title": "Солярис",
+      "author": "Станислав Лем",
+      "category": "Фантастика",
+      "format": "PDF",
+      "language": "ru",
+      "path": "library/Фантастика/Лем/Солярис.pdf",
+      "size": "2.1 MB",
+      "date_added": "2026-04-15",
+      "bookmark": false,
+      "rating": 4,
+      "notes": "",
+      "tags": [ "космос", "философия" ],
+      "read": true,
+      "read_date": "2026-04-20"
+    },
+    {
+      "id": 3,
+      "title": "Убийство в Восточном экспрессе",
+      "author": "Агата Кристи",
+      "category": "Детективы",
+      "format": "EPUB",
+      "language": "ru",
+      "path": "library/Детективы/Кристи/Убийство в Восточном экспрессе.epub",
+      "size": "0.8 MB",
+      "date_added": "2026-03-20",
+      "bookmark": true,
+      "rating": 5,
+      "notes": "",
+      "tags": [ "классика", "детектив" ],
+      "read": true,
+      "read_date": "2026-03-25"
+    }
+  ]
+}

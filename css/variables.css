@@ -1,0 +1,108 @@
+/* ============================================================
+   css/variables.css — CSS-переменные для тем
+   Версия: 1.0
+   Проект: Книжная полка
+   ============================================================ */
+
+/* Светлая тема (по умолчанию) */
+:root {
+    --bg: #f3f4f6;
+    --card-bg: #ffffff;
+    --card-border: #e5e7eb;
+    --text: #1f2937;
+    --text-dim: #6b7280;
+    --heading: #8b5e3c;
+    --link: #8b5e3c;
+    --btn-bg: #8b5e3c;
+    --btn-text: #ffffff;
+    --btn-outline-text: #8b5e3c;
+    --sidebar-bg: #5b3e2e;
+    --sidebar-text: #d4c5a9;
+    --header-bg: #5b3e2e;
+    --header-text: #ffffff;
+    --footer-bg: #5b3e2e;
+    --footer-text: #d4c5a9;
+    --accent: #d4a056;
+    --star: #f59e0b;
+    --badge-bg: #fef3c7;
+    --badge-text: #92400e;
+    --input-bg: #ffffff;
+    --hover: rgba(0, 0, 0, 0.05);
+    --overlay: rgba(0, 0, 0, 0.6);
+    --shadow: rgba(0, 0, 0, 0.1);
+    --font-size-base: 14px;
+    --font-size-sm: 12px;
+    --font-size-lg: 18px;
+}
+
+/* Тёмная тема */
+[data-theme="dark"] {
+    --bg: #1a1a2e;
+    --card-bg: #16213e;
+    --card-border: #0f3460;
+    --text: #e0e0e0;
+    --text-dim: #a0a0a0;
+    --heading: #e94560;
+    --link: #667eea;
+    --btn-bg: #4f46e5;
+    --btn-text: #ffffff;
+    --btn-outline-text: #667eea;
+    --sidebar-bg: #0f0f23;
+    --sidebar-text: #a0a0c0;
+    --header-bg: #0f0f23;
+    --header-text: #e0e0e0;
+    --footer-bg: #0f0f23;
+    --footer-text: #a0a0c0;
+    --accent: #667eea;
+    --star: #f59e0b;
+    --badge-bg: #1e3a5f;
+    --badge-text: #93c5fd;
+    --input-bg: #16213e;
+    --hover: rgba(255, 255, 255, 0.05);
+    --overlay: rgba(0, 0, 0, 0.8);
+    --shadow: rgba(0, 0, 0, 0.3);
+}
+
+/* Контрастная тема (для слабовидящих) */
+[data-theme="high-contrast"] {
+    --bg: #000000;
+    --card-bg: #000000;
+    --card-border: #ffffff;
+    --text: #ffffff;
+    --text-dim: #ffffff;
+    --heading: #ffff00;
+    --link: #00ffff;
+    --btn-bg: #000000;
+    --btn-text: #ffffff;
+    --btn-outline-text: #ffffff;
+    --sidebar-bg: #000000;
+    --sidebar-text: #ffffff;
+    --header-bg: #000000;
+    --header-text: #ffffff;
+    --footer-bg: #000000;
+    --footer-text: #ffffff;
+    --accent: #ffff00;
+    --star: #ffff00;
+    --badge-bg: #000000;
+    --badge-text: #ffffff;
+    --input-bg: #000000;
+    --hover: rgba(255, 255, 255, 0.1);
+    --overlay: rgba(0, 0, 0, 0.9);
+    --shadow: none;
+    --font-size-base: 18px;
+    --font-size-sm: 16px;
+    --font-size-lg: 22px;
+}
+
+/* Применение размеров */
+body {
+    font-size: var(--font-size-base);
+}
+
+.sidebar .category-item {
+    font-size: var(--font-size-sm);
+}
+
+.book-title {
+    font-size: var(--font-size-lg);
+}
