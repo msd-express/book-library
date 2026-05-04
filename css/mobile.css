@@ -1,6 +1,6 @@
 /* ============================================================
    css/mobile.css — Адаптивность и гамбургер-меню
-   Версия: 1.0
+   Версия: 2.0 (исправлено для мобильных)
    Проект: Книжная полка
    ============================================================ */
 
@@ -10,21 +10,22 @@
     background: none;
     border: none;
     cursor: pointer;
-    padding: 4px;
+    padding: 8px;
+    z-index: 101;
 }
 
     .hamburger span {
         display: block;
-        width: 22px;
+        width: 24px;
         height: 3px;
-        margin: 4px 0;
-        border-radius: 2px;
+        margin: 5px 0;
+        border-radius: 3px;
         background: var(--header-text);
-        transition: all 0.3s;
+        transition: all 0.3s ease;
     }
 
     .hamburger.open span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
+        transform: rotate(45deg) translate(6px, 6px);
     }
 
     .hamburger.open span:nth-child(2) {
@@ -32,7 +33,7 @@
     }
 
     .hamburger.open span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
+        transform: rotate(-45deg) translate(6px, -6px);
     }
 
 /* Оверлей */
@@ -65,11 +66,11 @@
 /* Телефоны (до 768px) */
 @media (max-width: 768px) {
     .hamburger {
-        display: block;
+        display: block !important;
     }
 
     .sidebar {
-        position: fixed;
+        position: fixed !important;
         top: 0;
         left: -280px;
         width: 280px;
@@ -77,6 +78,7 @@
         height: 100vh;
         z-index: 100;
         transition: left 0.3s ease;
+        box-shadow: 2px 0 10px rgba(0,0,0,0.2);
     }
 
         .sidebar.open {
@@ -100,7 +102,7 @@
     }
 
         .header h1 {
-            font-size: 17px;
+            font-size: 18px;
         }
 
     .search-box {
@@ -139,6 +141,6 @@
     }
 
     .book-title {
-        font-size: 14px;
+        font-size: 15px;
     }
 }

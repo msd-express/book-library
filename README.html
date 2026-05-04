@@ -49,29 +49,13 @@
             margin: 24px 0 10px;
         }
         
-        p {
-            margin-bottom: 12px;
-            text-align: justify;
-        }
+        p { margin-bottom: 12px; text-align: justify; }
         
-        a {
-            color: #8b5e3c;
-            text-decoration: none;
-            border-bottom: 1px dotted #c4a882;
-        }
+        a { color: #8b5e3c; text-decoration: none; border-bottom: 1px dotted #c4a882; }
+        a:hover { color: #5b3e2e; border-bottom: 1px solid #8b5e3c; }
         
-        a:hover {
-            color: #5b3e2e;
-            border-bottom: 1px solid #8b5e3c;
-        }
-        
-        ul, ol {
-            margin: 10px 0 16px 24px;
-        }
-        
-        li {
-            margin-bottom: 6px;
-        }
+        ul, ol { margin: 10px 0 16px 24px; }
+        li { margin-bottom: 6px; }
         
         code {
             background: #f5f0e8;
@@ -95,44 +79,14 @@
             margin: 14px 0;
         }
         
-        pre code {
-            background: none;
-            border: none;
-            padding: 0;
-            color: #f0e6d3;
-            font-size: 13px;
-        }
+        pre code { background: none; border: none; padding: 0; color: #f0e6d3; font-size: 13px; }
         
-        hr {
-            border: none;
-            border-top: 1px solid #e8d5b0;
-            margin: 30px 0;
-        }
+        hr { border: none; border-top: 1px solid #e8d5b0; margin: 30px 0; }
         
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 16px 0;
-            font-size: 14px;
-        }
-        
-        th {
-            background: #5b3e2e;
-            color: #fff;
-            padding: 10px 14px;
-            text-align: left;
-            font-weight: 600;
-            font-size: 13px;
-        }
-        
-        td {
-            padding: 9px 14px;
-            border: 1px solid #e0d3c0;
-        }
-        
-        tr:nth-child(even) td {
-            background: #faf6f0;
-        }
+        table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+        th { background: #5b3e2e; color: #fff; padding: 10px 14px; text-align: left; font-weight: 600; font-size: 13px; }
+        td { padding: 9px 14px; border: 1px solid #e0d3c0; }
+        tr:nth-child(even) td { background: #faf6f0; }
         
         blockquote {
             border-left: 4px solid #d4a056;
@@ -152,17 +106,7 @@
             border-radius: 0 6px 6px 0;
         }
         
-        .badge {
-            display: inline-block;
-            padding: 3px 10px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            background: #fef3c7;
-            color: #92400e;
-            margin: 0 2px;
-        }
-        
+        .badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; background: #fef3c7; color: #92400e; margin: 0 2px; }
         .badge-green { background: #d1fae5; color: #065f46; }
         .badge-red { background: #fee2e2; color: #991b1b; }
         .badge-blue { background: #dbeafe; color: #1e40af; }
@@ -174,41 +118,22 @@
             padding: 20px 24px;
             margin: 24px 0;
         }
-        
         .toc h3 { margin-top: 0; color: #5b3e2e; }
         .toc ol { margin-bottom: 0; }
         .toc a { color: #6b4e3a; border-bottom: none; }
         .toc a:hover { color: #8b5e3c; text-decoration: underline; }
         
-        .footer {
-            text-align: center;
-            margin-top: 50px;
-            padding-top: 24px;
-            border-top: 2px solid #e8d5b0;
-            color: #8b7355;
-            font-size: 13px;
-        }
-        
+        .footer { text-align: center; margin-top: 50px; padding-top: 24px; border-top: 2px solid #e8d5b0; color: #8b7355; font-size: 13px; }
         .footer .heart { color: #e74c3c; }
         
-        @media (max-width: 768px) {
-            body { padding: 20px 16px; font-size: 14px; }
-            h1 { font-size: 24px; }
-            h2 { font-size: 18px; }
-            pre { font-size: 12px; padding: 12px 14px; }
-        }
-        
-        @media print {
-            body { background: #fff; padding: 0; font-size: 12px; line-height: 1.5; }
-            pre { background: #f5f5f5; color: #2d2d2d; border: 1px solid #ddd; }
-            pre code { color: #2d2d2d; }
-        }
+        @media (max-width: 768px) { body { padding: 20px 16px; font-size: 14px; } h1 { font-size: 24px; } h2 { font-size: 18px; } pre { font-size: 12px; padding: 12px 14px; } }
+        @media print { body { background: #fff; padding: 0; font-size: 12px; line-height: 1.5; } pre { background: #f5f5f5; color: #2d2d2d; border: 1px solid #ddd; } pre code { color: #2d2d2d; } }
     </style>
 </head>
 <body>
 
 <h1>📚 Книжная полка</h1>
-<p class="subtitle">Электронная библиотека с открытым исходным кодом<br>Версия 2.0 • Май 2026</p>
+<p class="subtitle">Электронная библиотека с открытым исходным кодом<br>Версия 2.1 • Май 2026</p>
 
 <div class="toc">
     <h3>📋 Содержание</h3>
@@ -222,6 +147,7 @@
         <li><a href="#categories">Категории</a></li>
         <li><a href="#import">Импорт книг</a></li>
         <li><a href="#reader">Встроенная читалка</a></li>
+        <li><a href="#cloud">Облачная синхронизация (Яндекс.Диск)</a></li>
         <li><a href="#export">Экспорт данных</a></li>
         <li><a href="#themes">Темы оформления</a></li>
         <li><a href="#pwa">Установка на устройство</a></li>
@@ -237,19 +163,19 @@
 <p><strong>«Книжная полка»</strong> — это бесплатный инструмент для управления личной электронной библиотекой. Приложение работает как обычный HTML-файл, не требует установки, сервера или постоянного подключения к интернету. Вся библиотека хранится локально на вашем устройстве.</p>
 
 <div class="highlight">
-    <p><strong>Главный принцип:</strong> открыл файл <code>index.html</code> в браузере — и всё работает. Никаких установок, регистраций, облаков. Ваши книги — только ваши.</p>
+    <p><strong>Главный принцип:</strong> открыл файл index.html в браузере — и всё работает. Никаких установок, регистраций, облаков. Ваши книги — только ваши.</p>
 </div>
 
 <!-- 2 -->
 <h2 id="features">🚀 Возможности</h2>
-
 <table>
     <tr><th>Функция</th><th>Описание</th></tr>
     <tr><td>📂 Управление библиотекой</td><td>Категории, теги, поиск, фильтрация</td></tr>
-    <tr><td>📥 Импорт с копированием</td><td>Копирует книги в папку <code>library/</code>, распаковывает ZIP-архивы</td></tr>
+    <tr><td>📥 Импорт с копированием</td><td>Копирует книги в папку library/, распаковывает ZIP-архивы</td></tr>
     <tr><td>📖 Встроенная читалка</td><td>EPUB, FB2, MOBI, TXT, PDF, DOC, DOCX, DJVU</td></tr>
     <tr><td>🎨 Темы чтения</td><td>Светлая, сепия, тёмная, контрастная</td></tr>
     <tr><td>💾 Прогресс чтения</td><td>Автосохранение позиции для каждой книги</td></tr>
+    <tr><td>☁️ Облачная синхронизация</td><td>Яндекс.Диск (опционально)</td></tr>
     <tr><td>🔖 Закладки</td><td>Избранное, отметки о прочтении</td></tr>
     <tr><td>📝 Заметки</td><td>Встроенный редактор заметок к книгам</td></tr>
     <tr><td>⭐ Оценки</td><td>Рейтинг от 1 до 5 звёзд</td></tr>
@@ -261,251 +187,127 @@
 
 <!-- 3 -->
 <h2 id="requirements">💻 Системные требования</h2>
-
 <table>
     <tr><th>Компонент</th><th>Требование</th></tr>
-    <tr><td>Браузер</td><td>Chrome, Edge, Firefox, Safari, Яндекс.Браузер (современные версии)</td></tr>
-    <tr><td>Интернет</td><td>Не требуется (кроме первого запуска читалки — загрузка библиотек)</td></tr>
+    <tr><td>Браузер</td><td>Chrome, Edge, Firefox, Safari, Яндекс.Браузер</td></tr>
+    <tr><td>Интернет</td><td>Не требуется (кроме первого запуска читалки и облачной синхронизации)</td></tr>
     <tr><td>Сервер</td><td>Не требуется</td></tr>
     <tr><td>Место на диске</td><td>~150 КБ для программы + место под книги</td></tr>
     <tr><td>ОС</td><td>Любая (Windows, macOS, Linux)</td></tr>
 </table>
 
-<blockquote>
-    <strong>Важно:</strong> Для импорта с копированием используйте Chrome или Edge. Другие браузеры могут не поддерживать File System Access API.
-</blockquote>
-
 <!-- 4 -->
 <h2 id="install">📦 Установка и запуск</h2>
-
 <h3>Способ 1: Самый простой</h3>
-<ol>
-    <li>Скопируйте папку <code>book-library</code> на компьютер</li>
-    <li>Откройте файл <code>index.html</code> двойным кликом</li>
-    <li>Всё работает!</li>
-</ol>
+<ol><li>Скопируйте папку book-library на компьютер</li><li>Откройте файл index.html двойным кликом</li><li>Всё работает!</li></ol>
 
 <h3>Способ 2: На флешке</h3>
-<ol>
-    <li>Скопируйте папку <code>book-library</code> на USB-флешку</li>
-    <li>Вставьте флешку в любой компьютер</li>
-    <li>Откройте <code>index.html</code> — библиотека всегда с вами</li>
-</ol>
+<ol><li>Скопируйте папку book-library на USB-флешку</li><li>Вставьте флешку в любой компьютер</li><li>Откройте index.html — библиотека всегда с вами</li></ol>
 
 <!-- 5 -->
 <h2 id="structure">📁 Структура файлов</h2>
-
 <pre><code>📁 book-library/
-│
-├── 📄 index.html          ← Главный файл (откройте его!)
+├── 📄 index.html          ← Главный файл
 ├── 📄 library.json        ← База данных
-├── 📄 README.html         ← Эта инструкция
-│
+├── 📄 README.html         ← Инструкция
+├── 📄 LICENSE.md          ← Лицензия
 ├── 📁 css/
 │   ├── variables.css      ← Цвета и переменные
 │   ├── themes.css         ← Стили оформления
 │   ├── mobile.css         ← Адаптивность
 │   └── reader.css         ← Стили читалки
-│
 ├── 📁 js/
 │   ├── app.js             ← Основная логика
 │   ├── parser.js          ← Парсер и импорт
-│   ├── search.js          ← Поиск и фильтрация
-│   ├── export.js          ← Экспорт в форматы
+│   ├── search.js          ← Поиск
+│   ├── export.js          ← Экспорт
 │   ├── theme.js           ← Темы оформления
-│   └── reader.js          ← Встроенная читалка
-│
-├── 📁 library/            ← Папка с книгами
-│   ├── 📁 Фантастика/     ← Категория = подпапка
-│   ├── 📁 Детективы/
-│   └── 📁 Учебники/
-│
-└── 📁 backups/            ← Автоматические бекапы</code></pre>
+│   ├── reader.js          ← Читалка
+│   └── cloud.js           ← Облачная синхронизация
+└── 📁 library/            ← Папка с книгами</code></pre>
 
 <!-- 6 -->
 <h2 id="usage">📖 Как пользоваться</h2>
-
 <h3>Добавление книг</h3>
 <p><strong>Способ 1: Через кнопку «Добавить»</strong></p>
-<ol>
-    <li>Нажмите <strong>«➕ Добавить»</strong></li>
-    <li>Нажмите <strong>«📁 Выбрать»</strong> и выберите файл книги</li>
-    <li>Название и автор заполнятся автоматически (из имени файла)</li>
-    <li>Выберите категорию (по умолчанию «Другое»)</li>
-    <li>Добавьте теги, заметки, оценку</li>
-    <li>Нажмите <strong>«💾 Сохранить»</strong></li>
-</ol>
-
-<p><strong>Способ 2: Импорт с копированием</strong></p>
-<ol>
-    <li>Нажмите <strong>«📥 Импорт»</strong></li>
-    <li>Выберите папку с книгами</li>
-    <li>Выберите папку проекта (где лежит <code>index.html</code>)</li>
-    <li>Программа скопирует все книги в <code>library/</code> и добавит в каталог</li>
-</ol>
-
-<h3>Редактирование книг</h3>
-<p>Нажмите на название книги или кнопку <strong>✏️</strong>, измените данные и сохраните.</p>
-
-<h3>Поиск и фильтрация</h3>
-<ul>
-    <li><strong>Поиск:</strong> введите текст в поле поиска — результаты мгновенные</li>
-    <li><strong>По тегу:</strong> кликните на тег в карточке книги</li>
-    <li><strong>По категории:</strong> выберите категорию в левом меню</li>
-    <li><strong>Избранное:</strong> покажет только книги с 🔖</li>
-    <li><strong>Непрочитанные:</strong> покажет неотмеченные как прочитанные</li>
-    <li><strong>Сброс:</strong> нажмите Escape или очистите поиск</li>
-</ul>
-
-<h3>Закладки, заметки и оценки</h3>
-<p>Отмечайте книги как избранные 🔖, добавляйте заметки и ставьте оценки от ⭐ до ⭐⭐⭐⭐⭐ при редактировании.</p>
+<ol><li>Нажмите «➕ Добавить»</li><li>Нажмите «📁 Выбрать» и выберите файл</li><li>Название и автор заполнятся автоматически</li><li>Выберите категорию, добавьте теги</li><li>Нажмите «💾 Сохранить»</li></ol>
 
 <!-- 7 -->
 <h2 id="categories">📂 Категории</h2>
-
-<div class="highlight">
-    <p><strong>Категории создаются автоматически</strong> на основе структуры папок в <code>library/</code>.</p>
-</div>
-
-<h3>Как это работает</h3>
-<ol>
-    <li>При импорте программа копирует файлы в <code>library/</code>, сохраняя структуру подпапок</li>
-    <li>Каждая подпапка внутри <code>library/</code> становится категорией</li>
-    <li>Например: <code>library/Фантастика/Азимов/Основание.fb2</code> → категория <strong>Фантастика</strong></li>
-</ol>
-
-<h3>Как создать новую категорию</h3>
-<p>Просто создайте новую папку внутри <code>library/</code> через проводник (Windows) или Finder (Mac) и поместите туда книги. При следующем импорте или сканировании категория появится автоматически.</p>
-
-<h3>Как удалить категорию</h3>
-<p>Нажмите <strong>✕</strong> рядом с категорией в левом меню. Все книги из этой категории будут перенесены в <strong>«Другое»</strong>. Сами файлы на диске останутся нетронутыми.</p>
-
-<blockquote>Категорию <strong>«Другое»</strong> удалить нельзя — она служит для книг, у которых не определилась категория.</blockquote>
+<div class="highlight"><p><strong>Категории создаются автоматически</strong> на основе структуры папок в library/.</p></div>
 
 <!-- 8 -->
 <h2 id="import">📥 Импорт книг</h2>
-
-<p>Библиотека поддерживает импорт книг с автоматическим копированием в папку <code>library/</code>.</p>
-
-<h3>Как это работает</h3>
-<ol>
-    <li>Нажмите <strong>«📥 Импорт»</strong></li>
-    <li>Выберите исходную папку с книгами</li>
-    <li>Выберите папку проекта (где лежит <code>index.html</code>)</li>
-    <li>Программа скопирует все найденные книги в <code>library/</code></li>
-    <li>ZIP-архивы будут автоматически распакованы</li>
-    <li>Все книги добавятся в каталог</li>
-</ol>
-
-<h3>Поддерживаемые форматы</h3>
-<p>
-    <span class="badge">PDF</span> <span class="badge">EPUB</span> <span class="badge">FB2</span> <span class="badge">DJVU</span>
-    <span class="badge">MOBI</span> <span class="badge">TXT</span> <span class="badge">DOC</span> <span class="badge">DOCX</span>
-    <span class="badge">RTF</span> <span class="badge">CHM</span>
-</p>
-
-<h3>Поддерживаемые архивы</h3>
-<p>
-    <span class="badge badge-green">ZIP</span> — полная распаковка
-    <span class="badge badge-red">RAR</span> — только обнаружение (распакуйте вручную)
-</p>
-
-<h3>Форматы имён для автопарсинга</h3>
-<table>
-    <tr><th>Имя файла</th><th>Автор</th><th>Название</th></tr>
-    <tr><td><code>Азимов - Основание.fb2</code></td><td>Азимов</td><td>Основание</td></tr>
-    <tr><td><code>Asimov - Foundation.epub</code></td><td>Asimov</td><td>Foundation</td></tr>
-    <tr><td><code>Основание (Азимов).fb2</code></td><td>Азимов</td><td>Основание</td></tr>
-    <tr><td><code>Foundation - Isaac Asimov.pdf</code></td><td>Isaac Asimov</td><td>Foundation</td></tr>
-</table>
+<p>Поддерживаемые форматы:</p>
+<p><span class="badge">PDF</span> <span class="badge">EPUB</span> <span class="badge">FB2</span> <span class="badge">DJVU</span> <span class="badge">MOBI</span> <span class="badge">TXT</span> <span class="badge">DOC</span> <span class="badge">DOCX</span></p>
 
 <!-- 9 -->
 <h2 id="reader">📖 Встроенная читалка</h2>
-
-<p>Читалка открывается кнопкой <strong>«📖 Читать»</strong> на карточке книги.</p>
-
-<h3>Возможности читалки</h3>
 <table>
-    <tr><th>Функция</th><th>Как использовать</th></tr>
-    <tr><td>📖 Открытие</td><td>Кнопка «📖 Читать»</td></tr>
-    <tr><td>◀▶ Навигация</td><td>Кнопки или стрелки клавиатуры</td></tr>
-    <tr><td>🎨 Темы</td><td>☀️ Светлая / 📜 Сепия / 🌙 Тёмная / 🔲 Контрастная</td></tr>
-    <tr><td>🔍 Шрифт</td><td>A+ / A-</td></tr>
-    <tr><td>📑 Оглавление</td><td>Кнопка 📑</td></tr>
-    <tr><td>💾 Прогресс</td><td>Сохраняется автоматически</td></tr>
-</table>
-
-<h3>Поддерживаемые форматы</h3>
-<table>
-    <tr><th>Формат</th><th>Поддержка</th><th>Технология</th></tr>
-    <tr><td>EPUB</td><td><span class="badge badge-green">✅ Полная</span></td><td>epub.js — пагинация, оглавление, темы</td></tr>
-    <tr><td>FB2</td><td><span class="badge badge-green">✅ Частичная</span></td><td>epub.js</td></tr>
-    <tr><td>MOBI</td><td><span class="badge badge-blue">✅ Базовая</span></td><td>epub.js</td></tr>
-    <tr><td>PDF</td><td><span class="badge badge-green">✅ Полная</span></td><td>Встроенный просмотрщик + маска темы</td></tr>
-    <tr><td>TXT</td><td><span class="badge badge-green">✅ Полная</span></td><td>Нативный рендеринг с настройками</td></tr>
-    <tr><td>DOC/DOCX</td><td><span class="badge badge-green">✅ Чтение</span></td><td>mammoth.js</td></tr>
-    <tr><td>DJVU</td><td><span class="badge badge-blue">ℹ️ Информация</span></td><td>Скачивание</td></tr>
-    <tr><td>ZIP</td><td><span class="badge badge-green">📦 Распаковка</span></td><td>JSZip (при импорте)</td></tr>
-    <tr><td>RAR</td><td><span class="badge badge-red">📦 Обнаружение</span></td><td>Ручная распаковка</td></tr>
+    <tr><th>Формат</th><th>Поддержка</th></tr>
+    <tr><td>EPUB</td><td>✅ Полная</td></tr>
+    <tr><td>FB2</td><td>✅ Частичная</td></tr>
+    <tr><td>PDF</td><td>✅ Полная</td></tr>
+    <tr><td>TXT</td><td>✅ Полная</td></tr>
+    <tr><td>DOC/DOCX</td><td>✅ Чтение</td></tr>
 </table>
 
 <!-- 10 -->
-<h2 id="export">📤 Экспорт данных</h2>
+<h2 id="cloud">☁️ Облачная синхронизация (Яндекс.Диск)</h2>
+<p>Приложение поддерживает опциональную синхронизацию библиотеки между устройствами через <strong>Яндекс.Диск</strong>.</p>
 
-<table>
-    <tr><th>Формат</th><th>Кнопка</th><th>Открывается в</th></tr>
-    <tr><td>CSV</td><td>📊 Excel</td><td>Excel, Google Таблицы</td></tr>
-    <tr><td>Markdown</td><td>📝 MD</td><td>Блокнот, редакторы Markdown</td></tr>
-    <tr><td>JSON</td><td>📥 JSON (бекап)</td><td>Для резервного копирования</td></tr>
-    <tr><td>TXT</td><td>📄 TXT</td><td>Блокнот</td></tr>
-    <tr><td>HTML</td><td>🌐 HTML</td><td>Браузер</td></tr>
-    <tr><td>Печать</td><td>🖨️ Печать</td><td>Принтер / PDF</td></tr>
-</table>
+<div class="highlight"><p><strong>⚡ Быстрая настройка:</strong> Откройте приложение, нажмите «🔗 Подключить Яндекс.Диск» в левом меню и следуйте инструкциям.</p></div>
+
+<h3>Как это работает</h3>
+<ol>
+    <li>Вы подключаете Яндекс.Диск в настройках приложения</li>
+    <li>Приложение создаёт папку book-library на вашем Яндекс.Диске</li>
+    <li>Туда автоматически сохраняются library.json и прогресс чтения</li>
+    <li>При открытии на другом устройстве данные загружаются из облака</li>
+</ol>
+
+<h3>Важные условия</h3>
+<ul>
+    <li><strong>Подключение облака — добровольное</strong></li>
+    <li><strong>Ответственность за использование Яндекс.Диска лежит на пользователе</strong></li>
+    <li>При превышении лимита приложение предупредит и продолжит работу локально</li>
+    <li>Вы можете отключить облако в любой момент</li>
+</ul>
+
+<blockquote><strong>⚠️ Дисклеймер:</strong> Функция облачной синхронизации предоставляется «как есть». Разработчик не несёт ответственности за любые проблемы, связанные с использованием облачного хранилища.</blockquote>
 
 <!-- 11 -->
-<h2 id="themes">🎨 Темы оформления</h2>
-
+<h2 id="export">📤 Экспорт данных</h2>
 <table>
-    <tr><th>Тема</th><th>Описание</th></tr>
-    <tr><td>☀️ Светлая</td><td>По умолчанию, для дневного чтения</td></tr>
-    <tr><td>🌙 Тёмная</td><td>Комфортно для глаз в темноте</td></tr>
-    <tr><td>🔲 Контрастная</td><td>Увеличенный шрифт, максимальный контраст</td></tr>
+    <tr><th>Формат</th><th>Открывается в</th></tr>
+    <tr><td>📊 CSV</td><td>Excel, Google Таблицы</td></tr>
+    <tr><td>📝 Markdown</td><td>Блокнот, редакторы</td></tr>
+    <tr><td>📥 JSON</td><td>Резервное копирование</td></tr>
+    <tr><td>📄 TXT</td><td>Блокнот</td></tr>
+    <tr><td>🌐 HTML</td><td>Браузер</td></tr>
+    <tr><td>🖨️ Печать</td><td>Принтер / PDF</td></tr>
 </table>
 
-<p>Переключайте темы в выпадающем меню в левом сайдбаре. Тема сохраняется автоматически.</p>
-
 <!-- 12 -->
-<h2 id="pwa">📲 Установка на устройство (PWA)</h2>
-
-<ol>
-    <li>Откройте <code>index.html</code> в браузере</li>
-    <li>Нажмите <strong>📲</strong> вверху страницы</li>
-    <li>Или: меню браузера (⋮) → «Установить приложение» / «На экран Домой»</li>
-</ol>
+<h2 id="themes">🎨 Темы оформления</h2>
+<table>
+    <tr><th>Тема</th><th>Описание</th></tr>
+    <tr><td>☀️ Светлая</td><td>По умолчанию</td></tr>
+    <tr><td>🌙 Тёмная</td><td>Для тёмного времени суток</td></tr>
+    <tr><td>🔲 Контрастная</td><td>Увеличенный шрифт</td></tr>
+</table>
 
 <!-- 13 -->
-<h2 id="backup">💾 Резервное копирование</h2>
-
-<h3>Автоматически</h3>
-<p>При каждом сохранении создаётся бекап в localStorage браузера (последние 5 версий).</p>
-
-<h3>Вручную</h3>
-<ol>
-    <li>Нажмите <strong>«📥 JSON (бекап)»</strong> в левом меню</li>
-    <li>Сохраните файл в надёжное место</li>
-    <li>Для восстановления: <strong>«📄 JSON»</strong> → выберите файл</li>
-</ol>
-
-<blockquote>Рекомендуется делать ручной экспорт раз в месяц.</blockquote>
+<h2 id="pwa">📲 Установка на устройство (PWA)</h2>
+<ol><li>Откройте index.html в браузере</li><li>Нажмите 📲 вверху или меню браузера → «Установить приложение»</li></ol>
 
 <!-- 14 -->
-<h2 id="json">📄 Структура library.json</h2>
+<h2 id="backup">💾 Резервное копирование</h2>
+<ol><li>Нажмите «📥 JSON (бекап)» в левом меню</li><li>Сохраните файл</li><li>Для восстановления: «📄 JSON» → выберите файл</li></ol>
 
+<!-- 15 -->
+<h2 id="json">📄 Структура library.json</h2>
 <pre><code>{
-  "version": "1.0",
-  "updated": "2026-05-01T12:00:00",
-  "settings": { "theme": "light", "sort_by": "title" },
-  "categories": ["Фантастика", "Детективы"],
   "books": [
     {
       "id": 1,
@@ -513,59 +315,51 @@
       "author": "Айзек Азимов",
       "category": "Фантастика",
       "format": "FB2",
-      "path": "library/Фантастика/Азимов/Основание.fb2",
-      "size": "1.2 MB",
-      "bookmark": true,
-      "rating": 5,
-      "notes": "Классика научной фантастики",
-      "tags": ["космос", "классика"],
-      "read": false
+      "path": "library/Фантастика/Основание.fb2"
     }
   ]
 }</code></pre>
 
-<!-- 15 -->
+<!-- 16 -->
 <h2 id="troubles">🔧 Решение проблем</h2>
-
 <table>
     <tr><th>Проблема</th><th>Решение</th></tr>
-    <tr><td>Не открывается index.html</td><td>Попробуйте другой браузер (Chrome, Edge)</td></tr>
-    <tr><td>Не сохраняются данные</td><td>Проверьте, не включён ли режим инкогнито</td></tr>
-    <tr><td>Не работает читалка EPUB/DOCX</td><td>При первом запуске нужен интернет для загрузки библиотек</td></tr>
+    <tr><td>Не открывается</td><td>Попробуйте Chrome или Edge</td></tr>
+    <tr><td>Не работает читалка</td><td>Нужен интернет при первом запуске</td></tr>
     <tr><td>Не работает импорт</td><td>Используйте Chrome или Edge</td></tr>
-    <tr><td>Не распаковываются ZIP</td><td>Проверьте подключение к интернету (JSZip)</td></tr>
-    <tr><td>Пропали книги</td><td>Восстановите из бекапа: «📄 JSON»</td></tr>
-    <tr><td>Сбросить все настройки</td><td>Очистите localStorage браузера</td></tr>
+    <tr><td>Пропали книги</td><td>Восстановите из бекапа JSON</td></tr>
 </table>
 
-<!-- 16 -->
+<!-- 17 -->
 <h2 id="license">📜 Лицензия</h2>
-
-<p>Программа распространяется на условиях <strong>проприетарной лицензии</strong> в соответствии с законодательством РФ.</p>
-<p><strong>Правовое основание:</strong> Гражданский кодекс РФ, часть 4, статьи 1235–1239.</p>
+<p>Программа распространяется на условиях <strong>проприетарной лицензии</strong>.</p>
 
 <h3>✅ Разрешено</h3>
 <ul>
-    <li><strong>Свободное безвозмездное распространение</strong></li>
-    <li>Использование в личных целях — без ограничений</li>
-    <li>Установка на любое количество личных устройств</li>
-    <li>Копирование и передача третьим лицам бесплатно</li>
+    <li>Свободное безвозмездное распространение</li>
+    <li>Использование в личных целях</li>
+    <li>Подключение облачных сервисов по желанию</li>
 </ul>
 
 <h3>❌ Запрещено</h3>
 <ul>
-    <li><strong>Коммерциализация</strong> — нельзя зарабатывать на программе</li>
-    <li>Продажа, сдача в аренду, прокат</li>
-    <li>Монетизация любым способом</li>
+    <li>Коммерциализация</li>
+    <li>Продажа, сдача в аренду</li>
 </ul>
 
-<blockquote>
-    <strong>Суть лицензии:</strong> Программа создана для людей. Делитесь свободно, используйте где удобно. Единственное ограничение — не пытайтесь на этом заработать. Это подарок сообществу.
-</blockquote>
+<h3>☁️ Особые условия облачной синхронизации</h3>
+<ul>
+    <li>Облачная синхронизация — опциональная функция</li>
+    <li>Ответственность за использование облачных сервисов лежит на пользователе</li>
+    <li>Приложение предоставляется «как есть» без гарантий работы облачных функций</li>
+</ul>
+
+<blockquote><strong>Суть лицензии:</strong> Программа создана для людей. Делитесь свободно, используйте где удобно. Это подарок сообществу.</blockquote>
 
 <div class="footer">
     <p>Сделано с <span class="heart">❤️</span> для сообщества</p>
-    <p>Май 2026</p>
+    <p>Версия 2.1 • Май 2026</p>
+    <p style="font-size:10px;opacity:0.5;">Поддерживает синхронизацию через Яндекс.Диск</p>
 </div>
 
 </body>

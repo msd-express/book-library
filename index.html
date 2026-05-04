@@ -10,23 +10,26 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Книжная полка">
+    
     <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>📚</text></svg>">
     <link rel="manifest" href="data:application/json,{}">
     
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/themes.css">
-    <link rel="stylesheet" href="css/mobile.css">
-    <link rel="stylesheet" href="css/reader.css">
+    <link rel="stylesheet" href="css/variables.css?v=2.0">
+    <link rel="stylesheet" href="css/themes.css?v=2.0">
+    <link rel="stylesheet" href="css/mobile.css?v=2.0">
+    <link rel="stylesheet" href="css/reader.css?v=2.0">
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/epub.js/0.3.93/epub.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/epub.js/0.3.93/epub.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" defer></script>
 </head>
 <body>
 
 <header class="header">
     <div style="display:flex;align-items:center;gap:10px;">
-        <button class="hamburger" onclick="toggleSidebar()" aria-label="Меню"><span></span><span></span><span></span></button>
+        <button class="hamburger" onclick="toggleSidebar()" aria-label="Меню">
+            <span></span><span></span><span></span>
+        </button>
         <h1>📚 Книжная полка</h1>
     </div>
     <div class="header-actions">
@@ -34,7 +37,7 @@
         <button class="btn btn-sm" onclick="openAddModal()">➕ Добавить</button>
         <button class="btn btn-sm btn-outline" onclick="importWithCopy()" title="Импорт с копированием в library/">📥 Импорт</button>
         <button class="btn btn-sm btn-outline" onclick="importJSON()" title="Импорт из JSON">📄 JSON</button>
-        <button class="btn btn-sm btn-outline" onclick="installPWA()" title="Установить">📲</button>
+        <button class="btn btn-sm btn-outline" onclick="installPWA()" title="Установить приложение">📲</button>
     </div>
 </header>
 
@@ -44,15 +47,19 @@
     <aside class="sidebar" id="sidebar">
         <h3>📂 Категории</h3>
         <ul class="category-list" id="categoryList"></ul>
+        
         <h3>📥 Импорт</h3>
         <ul class="category-list">
             <li class="category-item" onclick="importWithCopy()">📥 Импорт с копированием</li>
+            <li class="category-item" onclick="importJSON()">📄 Импорт из JSON</li>
         </ul>
+        
         <h3>🔖 Фильтры</h3>
         <ul class="category-list">
             <li class="category-item" data-cat="bookmarks" onclick="filterByCategory('bookmarks')">⭐ Избранное <span class="count" id="countBookmarks">0</span></li>
             <li class="category-item" data-cat="unread" onclick="filterByCategory('unread')">📖 Непрочитанные <span class="count" id="countUnread">0</span></li>
         </ul>
+        
         <h3>📤 Экспорт</h3>
         <ul class="category-list">
             <li class="category-item" onclick="Export.exportData('csv')">📊 Excel (CSV)</li>
@@ -62,20 +69,22 @@
             <li class="category-item" onclick="Export.exportData('html')">🌐 HTML</li>
             <li class="category-item" onclick="Export.printBooks(library.books)">🖨️ Печать</li>
         </ul>
+        
         <h3>📋 Справка</h3>
         <ul class="category-list">
             <li class="category-item" onclick="openReadme()">📖 Открыть инструкцию</li>
         </ul>
+        
         <h3>🎨 Оформление</h3>
         <div style="margin-top:6px;">
             <select id="themeSelect" onchange="setTheme(this.value)" style="
                 width:100%;
-                padding:6px 8px;
-                border-radius:6px;
+                padding:8px 10px;
+                border-radius:8px;
                 border:1px solid var(--card-border);
                 background:var(--input-bg);
                 color:var(--text);
-                font-size:12px;
+                font-size:13px;
                 cursor:pointer;
             ">
                 <option value="light">☀️ Светлая</option>
@@ -92,7 +101,9 @@
         </div>
         <div class="books-grid" id="booksGrid"></div>
         <div id="emptyState" style="display:none;text-align:center;padding:60px;color:var(--text-dim);">
-            <p style="font-size:64px;">📚</p><p>Библиотека пуста</p><p style="font-size:13px;">Нажмите «➕ Добавить» или «📥 Импорт»</p>
+            <p style="font-size:64px;">📚</p>
+            <p>Библиотека пуста</p>
+            <p style="font-size:13px;">Нажмите «➕ Добавить» или «📥 Импорт»</p>
         </div>
     </main>
 </div>
@@ -102,12 +113,16 @@
     <div class="modal">
         <h2 id="modalTitle">➕ Добавить книгу</h2>
         <input type="hidden" id="editId">
-        <label>Название *</label><input type="text" id="bookTitle" placeholder="Название книги" required>
-        <label>Автор *</label><input type="text" id="bookAuthor" placeholder="Автор" required>
+        <label>Название *</label>
+        <input type="text" id="bookTitle" placeholder="Название книги" required>
+        <label>Автор *</label>
+        <input type="text" id="bookAuthor" placeholder="Автор" required>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
             <div>
                 <label>Категория</label>
-                <select id="bookCategory" style="width:100%;"></select>
+                <select id="bookCategory" style="width:100%;">
+                    <option>Другое</option>
+                </select>
             </div>
             <div>
                 <label>Формат</label>
@@ -124,14 +139,28 @@
             <input type="file" id="bookFileInput" style="display:none;" accept=".pdf,.epub,.fb2,.djvu,.mobi,.txt,.doc,.docx,.rtf,.chm,.zip,.rar">
             <button class="btn btn-sm btn-outline" onclick="document.getElementById('bookFileInput').click()" style="flex-shrink:0;">📁 Выбрать</button>
         </div>
-        <label>Размер</label><input type="text" id="bookSize" placeholder="Определится автоматически" readonly>
-        <label>Теги</label><input type="text" id="bookTags" placeholder="космос, классика">
-        <label>Заметки</label><textarea id="bookNotes" placeholder="Ваши заметки..."></textarea>
-        <div style="display:flex;align-items:center;gap:6px;margin-bottom:10px;flex-wrap:wrap;">
-            <label style="display:flex;align-items:center;gap:4px;margin:0;font-size:13px;"><input type="checkbox" id="bookBookmark" style="width:auto;"> 🔖 В избранное</label>
-            <label style="display:flex;align-items:center;gap:4px;margin:0;font-size:13px;"><input type="checkbox" id="bookRead" style="width:auto;"> ✅ Прочитано</label>
-            <span style="margin-left:8px;">Оценка:</span>
-            <select id="bookRating" style="width:auto;"><option value="0">—</option><option value="1">⭐</option><option value="2">⭐⭐</option><option value="3">⭐⭐⭐</option><option value="4">⭐⭐⭐⭐</option><option value="5">⭐⭐⭐⭐⭐</option></select>
+        <label>Размер</label>
+        <input type="text" id="bookSize" placeholder="Определится автоматически" readonly>
+        <label>Теги</label>
+        <input type="text" id="bookTags" placeholder="космос, классика">
+        <label>Заметки</label>
+        <textarea id="bookNotes" placeholder="Ваши заметки..."></textarea>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap;">
+            <label style="display:flex;align-items:center;gap:6px;margin:0;font-size:13px;cursor:pointer;">
+                <input type="checkbox" id="bookBookmark" style="width:auto;"> 🔖 В избранное
+            </label>
+            <label style="display:flex;align-items:center;gap:6px;margin:0;font-size:13px;cursor:pointer;">
+                <input type="checkbox" id="bookRead" style="width:auto;"> ✅ Прочитано
+            </label>
+            <span style="margin-left:auto;">Оценка:</span>
+            <select id="bookRating" style="width:auto;">
+                <option value="0">—</option>
+                <option value="1">⭐</option>
+                <option value="2">⭐⭐</option>
+                <option value="3">⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐</option>
+                <option value="5">⭐⭐⭐⭐⭐</option>
+            </select>
         </div>
         <div class="btn-row">
             <button class="btn btn-outline" onclick="closeModal()">Отмена</button>
@@ -145,12 +174,15 @@
     <div class="reader-container">
         <div class="reader-toolbar">
             <div class="reader-toolbar-left">
-                <button class="btn btn-sm btn-outline" onclick="Reader.closeReader()">✕</button>
-                <span class="reader-book-info"><strong id="readerBookTitle"></strong><span id="readerBookAuthor" style="font-size:11px;opacity:0.7;margin-left:8px;"></span></span>
+                <button class="btn btn-sm btn-outline" onclick="Reader.closeReader()" style="font-size:16px;padding:4px 8px;">✕</button>
+                <span class="reader-book-info">
+                    <strong id="readerBookTitle"></strong>
+                    <span id="readerBookAuthor" style="font-size:11px;opacity:0.7;margin-left:8px;"></span>
+                </span>
             </div>
             <div class="reader-toolbar-center">
                 <button class="btn btn-sm btn-outline" onclick="Reader.prevPage()">◀</button>
-                <span id="readerPageInfo" style="font-size:11px;min-width:80px;text-align:center;"></span>
+                <span id="readerPageInfo" style="font-size:11px;min-width:60px;text-align:center;"></span>
                 <button class="btn btn-sm btn-outline" onclick="Reader.nextPage()">▶</button>
             </div>
             <div class="reader-toolbar-right">
@@ -160,57 +192,33 @@
                 <button class="btn btn-sm btn-outline reader-theme-btn active" data-theme="white" onclick="Reader.setTheme('white')">☀️</button>
                 <button class="btn btn-sm btn-outline reader-theme-btn" data-theme="sepia" onclick="Reader.setTheme('sepia')">📜</button>
                 <button class="btn btn-sm btn-outline reader-theme-btn" data-theme="dark" onclick="Reader.setTheme('dark')">🌙</button>
-                <button class="btn btn-sm btn-outline reader-theme-btn" data-theme="contrast" onclick="Reader.setTheme('contrast')">🔲</button>
-                <button class="btn btn-sm" onclick="Reader.downloadCurrentBook()">📥</button>
+                <button class="btn btn-sm btn-outline" onclick="Reader.downloadCurrentBook()">📥</button>
             </div>
         </div>
         <div id="readerTocPanel" class="reader-toc-panel"></div>
-        <div id="readerLoader" class="reader-loader"><div><p style="font-size:48px;">📖</p><p>Загрузка книги...</p></div></div>
+        <div id="readerLoader" class="reader-loader" style="display:none;">
+            <div>
+                <p style="font-size:48px;">📖</p>
+                <p>Загрузка книги...</p>
+            </div>
+        </div>
         <div id="readerContent" class="reader-content"></div>
         <div class="reader-footer">
-            <div style="display:flex;gap:8px;align-items:center;">
-                <span style="font-size:10px;opacity:0.6;">Шрифт:</span>
-                <select onchange="Reader.setFontFamily(this.value)" style="width:auto;padding:2px 6px;font-size:10px;">
-                    <option value="Georgia, serif">Georgia</option><option value="'Times New Roman', serif">Times</option><option value="Arial, sans-serif">Arial</option><option value="Verdana, sans-serif">Verdana</option><option value="'Courier New', monospace">Courier</option>
-                </select>
-                <span style="font-size:10px;opacity:0.6;">Интервал:</span>
-                <select onchange="Reader.setLineHeight(parseFloat(this.value))" style="width:auto;padding:2px 6px;font-size:10px;">
-                    <option value="1.3">1.3</option><option value="1.6" selected>1.6</option><option value="2.0">2.0</option><option value="2.5">2.5</option>
-                </select>
-            </div>
             <span style="font-size:10px;opacity:0.5;">📚 Книжная полка</span>
         </div>
     </div>
 </div>
 
-<!-- Модалка README -->
-<div class="modal-overlay" id="readmeModal">
-    <div class="modal" style="max-width:850px;max-height:90vh;">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
-            <h2 style="margin:0;">📖 Инструкция</h2>
-            <div style="display:flex;gap:8px;">
-                <button class="btn btn-sm btn-outline" onclick="printReadme()" title="Печать инструкции">🖨️</button>
-                <button class="btn btn-sm btn-outline" onclick="closeReadme()">✕ Закрыть</button>
-            </div>
-        </div>
-        <iframe id="readmeFrame" src="README.html" style="width:100%;height:65vh;border:1px solid var(--card-border);border-radius:8px;background:var(--input-bg);"></iframe>
-        <div class="btn-row" style="margin-top:12px;">
-            <button class="btn btn-outline" onclick="closeReadme()">Закрыть</button>
-        </div>
-    </div>
-</div>
-
 <footer class="footer">
-    <p><a href="https://www.consultant.ru/document/cons_doc_LAW_64629/" target="_blank">Проприетарная лицензия (ГК РФ, ч.4, ст. 1235-1239)</a></p>
-    <p style="opacity:0.7;">Сделано с ❤️ для сообщества</p>
+    <p>Сделано с ❤️ для сообщества</p>
 </footer>
 
-<script src="js/theme.js"></script>
-<script src="js/parser.js"></script>
-<script src="js/search.js"></script>
-<script src="js/export.js"></script>
-<script src="js/reader.js"></script>
-<script src="js/app.js"></script>
+<script src="js/cloud.js?v=1.0"></script>
+<script src="js/parser.js?v=2.0"></script>
+<script src="js/search.js?v=2.0"></script>
+<script src="js/export.js?v=2.0"></script>
+<script src="js/reader.js?v=2.0"></script>
+<script src="js/app.js?v=2.7"></script>
 
 </body>
 </html>
